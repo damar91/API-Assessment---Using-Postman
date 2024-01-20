@@ -1,0 +1,107 @@
+{
+	"info": {
+		"_postman_id": "1865bc12-0d96-4ac5-8437-44eca75da86d",
+		"name": "reqres",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28194737"
+	},
+	"item": [
+		{
+			"name": "User From Page 3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/users?page=3",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Single User with ID 10",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/users/10",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register - Successful",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"eve.holt@reqres.in\",\r\n    \"password\": \"pistol\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/register",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register - Failed",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"sydney@fife\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/register",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
